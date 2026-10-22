@@ -1,0 +1,2 @@
+/* Connections. supabaseUrl is the project address WITHOUT /rest/v1. The anon key is public by design. */
+window.SITE_CONFIG={supabaseUrl:"https://kkxklvdtyppkshhundjr.supabase.co",supabaseKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtreGtsdmR0eXBwa3NoaHVuZGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1ODY2MzcsImV4cCI6MjEwODE2MjYzN30.eLMqUNKR-KJcF_9JCstf35bJKwSXQaY9xHhoaxq617g"};

@@ -1,0 +1,482 @@
+:root {
+    --n9: #050f26;
+    --n8: #071533;
+    --n7: #0b2250;
+    --blue: #1f6fe5;
+    --blue-d: #1658bb;
+    --sky: #7eb2ff;
+    --cream: #f3ead7;
+    --paper: #faf6ec;
+    --ink: #0b1b3a;
+    --txt: #3b4660;
+    --red: #c0362c;
+    --line: #d8deea;
+    --ease: cubic-bezier(.22, .8, .24, 1)
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--txt);
+    font: 16px/1.55 "Manrope", "Segoe UI", system-ui, sans-serif
+}
+
+h1,
+h2,
+h3 {
+    color: var(--ink);
+    margin: 0
+}
+
+button,
+input,
+textarea {
+    font: inherit
+}
+
+.login {
+    min-height: 100dvh;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 6px;
+    padding: 24px;
+    text-align: center;
+    background: radial-gradient(80% 60% at 50% 0, var(--n7), var(--n8) 70%);
+    color: #fff
+}
+
+.login h1 {
+    color: #fff;
+    font-size: 28px
+}
+
+.login p {
+    margin: 0;
+    color: rgba(255, 255, 255, .75)
+}
+
+.login-mark {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--n8);
+    margin-bottom: 8px
+}
+
+.login-mark svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor
+}
+
+.login-card {
+    width: min(380px, 100%);
+    margin-top: 14px;
+    padding: 24px;
+    border-radius: 22px;
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .35)
+}
+
+.login-card .ab {
+    width: 100%;
+    margin-top: 6px
+}
+
+.login-card .ast {
+    color: var(--red);
+    min-height: 22px;
+    margin-top: 10px
+}
+
+.adm {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh
+}
+
+.adm-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: var(--n8);
+    color: #fff
+}
+
+.adm-top b {
+    font-size: 18px
+}
+
+.adm-tabs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 10px 12px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    scrollbar-width: none
+}
+
+.adm-tabs::-webkit-scrollbar {
+    display: none
+}
+
+.adm-tabs button {
+    flex: none;
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--ink);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .25s, color .25s, transform .25s var(--ease)
+}
+
+.adm-tabs button:active {
+    transform: scale(.95)
+}
+
+.adm-tabs button[aria-selected="true"] {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff
+}
+
+.adm-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 16px 40px;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.adm-body h3 {
+    margin: 26px 0 10px;
+    font-size: 18px
+}
+
+.adm-body h3:first-child {
+    margin-top: 4px
+}
+
+.adm-body>p {
+    margin: 0 0 14px
+}
+
+.adm-save {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+    background: #fff;
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 20px rgba(11, 34, 80, .06)
+}
+
+.af {
+    margin: 0 0 14px
+}
+
+.af label {
+    display: block;
+    font-weight: 800;
+    color: var(--ink);
+    font-size: 14px;
+    margin-bottom: 5px
+}
+
+.af input:not([type=file]),
+.af textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #c8d0e0;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--ink)
+}
+
+.af input:focus,
+.af textarea:focus {
+    outline: 0;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 4px rgba(31, 111, 229, .15)
+}
+
+.ab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .25s, transform .2s var(--ease), opacity .25s
+}
+
+.ab:hover {
+    background: var(--blue-d)
+}
+
+.ab:active {
+    transform: scale(.96)
+}
+
+.ab:disabled {
+    opacity: .55;
+    cursor: default
+}
+
+.ab.ghost {
+    background: transparent;
+    color: var(--blue-d);
+    box-shadow: inset 0 0 0 1.5px var(--blue)
+}
+
+.adm-top .ab.ghost {
+    color: #fff;
+    box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .55)
+}
+
+.ab.ghost:hover {
+    background: rgba(31, 111, 229, .1)
+}
+
+.adm-top .ab.ghost:hover {
+    background: rgba(255, 255, 255, .14)
+}
+
+.ab.danger {
+    background: var(--red)
+}
+
+.ab.add {
+    background: var(--n8);
+    width: 100%;
+    margin-top: 6px
+}
+
+.ab.big {
+    padding: 16px 20px;
+    font-size: 17px;
+    width: 100%
+}
+
+.ab.save {
+    min-width: 150px
+}
+
+.ast {
+    font-size: 14px;
+    color: var(--txt);
+    font-weight: 600
+}
+
+.arow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 8px
+}
+
+.ai {
+    margin: 0 0 10px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    overflow: hidden
+}
+
+.ai>summary {
+    cursor: pointer;
+    padding: 14px 16px;
+    font-weight: 800;
+    color: var(--ink);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px
+}
+
+.ai>summary::-webkit-details-marker {
+    display: none
+}
+
+.ai>summary::after {
+    content: "+";
+    font-weight: 800;
+    color: var(--blue)
+}
+
+.ai[open]>summary::after {
+    content: "−"
+}
+
+.ai[open]>summary {
+    border-bottom: 1px solid var(--line);
+    background: var(--paper)
+}
+
+.ai>.af,
+.ai>.arow,
+.ai>.dz,
+.ai>.pgrid,
+.ai>.ast {
+    margin-left: 16px;
+    margin-right: 16px
+}
+
+.ai>.af:first-of-type {
+    margin-top: 14px
+}
+
+.ai>.arow:last-child {
+    margin-bottom: 16px
+}
+
+.ap {
+    display: block;
+    width: 160px;
+    max-width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    border: 1px solid var(--line)
+}
+
+.dz {
+    display: grid;
+    place-items: center;
+    gap: 4px;
+    padding: 22px 16px;
+    margin-top: 10px;
+    border: 2px dashed #aab6d0;
+    border-radius: 16px;
+    background: var(--paper);
+    text-align: center;
+    cursor: pointer;
+    transition: background .25s, border-color .25s
+}
+
+.dz.over {
+    background: #e6efff;
+    border-color: var(--blue)
+}
+
+.dz b {
+    color: var(--ink)
+}
+
+.pgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+    gap: 10px;
+    margin: 12px 0
+}
+
+.pt {
+    position: relative;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--n8);
+    aspect-ratio: 1;
+    animation: pop .35s var(--ease)
+}
+
+.pt img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.pt .pt-b {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 18px 6px 6px;
+    background: linear-gradient(transparent, rgba(5, 15, 38, .85))
+}
+
+.pt button,
+.pt span {
+    border: 0;
+    border-radius: 99px;
+    padding: 3px 9px;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(255, 255, 255, .2)
+}
+
+.pt span {
+    background: var(--blue);
+    cursor: default
+}
+
+.pt button.x {
+    background: var(--red)
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: scale(.9)
+    }
+}
+
+.msg {
+    padding: 14px 16px;
+    margin: 0 0 10px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff
+}
+
+.msg b {
+    color: var(--ink)
+}
+
+.msg small {
+    color: var(--txt);
+    display: block
+}
+
+.msg p {
+    margin: 8px 0 0;
+    white-space: pre-wrap
+}
+
+@media (max-width:560px) {
+    .adm-top .ab {
+        padding: 9px 12px
+    }
+}
