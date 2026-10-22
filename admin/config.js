@@ -1,2 +1,2 @@
 /* Supabase project (Project Settings > API). siteUrl = address of the public website (adds a "View website" button). */
-window.ADMIN_CONFIG={supabaseUrl:"https://kkxklvdtyppkshhundjr.supabase.co",supabaseKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtreGtsdmR0eXBwa3NoaHVuZGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1ODY2MzcsImV4cCI6MjEwODE2MjYzN30.eLMqUNKR-KJcF_9JCstf35bJKwSXQaY9xHhoaxq617g",siteUrl:""};
+window.ADMIN_CONFIG={supabaseUrl:"https://kkxklvdtyppkshhundjr.supabase.co/rest/v1/",supabaseKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtreGtsdmR0eXBwa3NoaHVuZGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1ODY2MzcsImV4cCI6MjEwODE2MjYzN30.eLMqUNKR-KJcF_9JCstf35bJKwSXQaY9xHhoaxq617g",siteUrl:""};
